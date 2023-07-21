@@ -1,0 +1,25 @@
+name: world_metro
+options:
+  minimumXcodeGenVersion: 2.17.0
+  createIntermediateGroups: true
+  bundleIdPrefix: com.iamai
+  developmentLanguage: ru
+  compatibilityVersion: "Xcode 13.0"
+  deploymentTarget:
+    iOS: 14.0
+settings:
+  GENERATE_INFOPLIST_FILE: NO
+  base:
+    SWIFT_VERSION: 5.0
+    IPHONEOS_DEPLOYMENT_TARGET: 14.0
+targets:
+  world_metro:
+    type: application
+    platform: iOS
+    sources: [world_metro]
+    info:
+      path: "./world_metro/Info.plist"
+      properties:
+        UILaunchScreen:
+          UIColorName: "LaunchScreen"
+
