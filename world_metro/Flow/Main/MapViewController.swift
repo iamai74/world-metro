@@ -5,4 +5,12 @@
 //  Created by Eugene Zhigunov on 16.08.2023.
 //
 
-import Foundation
+import UIKit
+
+final class MapViewController: UIViewController {
+    
+}
+
+extension MapViewController: MapViewProtocol {
+    
+}

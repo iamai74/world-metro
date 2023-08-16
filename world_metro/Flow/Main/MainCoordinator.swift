@@ -5,18 +5,32 @@
 //  Created by Eugene Zhigunov on 16.08.2023.
 //
 
-import UIKit
+import Foundation
 
-class MainCoordinator: Coordinator {
-    private let navigation: UINavigationController
+final class MainCoordinator: BaseCoordinator, MainCoordinatorOutput {
     
-    init(navigation: UINavigationController) {
-        self.navigation = navigation
+    var finishFlow: CompletionBlock?
+    
+    fileprivate let factory: MainFactoryProtocol
+    fileprivate let router: Routable
+    
+    init(with factory: MainFactoryProtocol, router: Routable) {
+        self.factory = factory
+        self.router  = router
     }
-    
+}
+
+// MARK: - Coordinatable
+extension MainCoordinator: Coordinatable {
     func start() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .magenta
-        navigation.setViewControllers([vc], animated: true)
+        performFlow()
+    }
+}
+
+// MARK: - Private methods
+private extension MainCoordinator {
+    func performFlow() {
+        let view = factory.makeMapView()
+        router.setRootModule(view, hideBar: true)
     }
 }

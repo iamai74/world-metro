@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol MainCoordinatorOutput: AnyObject{
+protocol MainCoordinatorOutput: AnyObject {
     var finishFlow: CompletionBlock? { get set }
 }

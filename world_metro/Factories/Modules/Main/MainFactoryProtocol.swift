@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol MainFactoryProtocol {
+    func makeMapView() -> MapViewProtocol
+}
