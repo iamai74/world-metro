@@ -1,0 +1,11 @@
+disabled_rules:
+    - trailing_whitespace
+opt_in_rules:
+    - empty_count
+    - force_unwrapping
+    - private_outlet
+    - closing_brace
+    - opening_brace
+    - return_arrow_whitespace
+    - trailing_semicolon
+    - statement_position
