@@ -11,8 +11,7 @@ final class ModulesFactory {}
 
 extension ModulesFactory: MainFactoryProtocol {
     func makeMapView() -> MapViewProtocol {
-        let vc = MapViewController()
-        vc.view.backgroundColor = .blue
-        return vc
+        let mapVC = MapViewController()
+        return mapVC
     }
 }

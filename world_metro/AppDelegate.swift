@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     fileprivate lazy var coordinator: Coordinatable = self.makeCoordinator()
     
+    // swiftlint:disable:next line_length
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
